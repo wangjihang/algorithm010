@@ -4,6 +4,8 @@ package ugly_number
 // 时间复杂度：O(n)
 // 空间复杂度：O(n)
 // x[a]*2 > x[i] > x[a-1]*2
+// x[b]*3 > x[i] > x[b-1]*3
+// x[c]*5 > x[i] > x[c-1]*5
 func nthUglyNumber(n int) int {
 	a, b, c := 0, 0, 0
 	arr := make([]int, n)

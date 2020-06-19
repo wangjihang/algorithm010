@@ -1,22 +1,17 @@
 package anagram
 
-// 数组法
-// a-z字符串
-func isAnagra(s string, t string) bool {
-	if len(s) != len(t) {
-		return false
-	}
-
-	var arr [26]int
-	length := len(s)
-	for i := 0; i < length; i++ {
-		arr[s[i]-'a']++
-		arr[t[i]-'a']++
-	}
-	for _, v := range arr {
-		if v != 0 {
-			return false
+func groupAnagrams(strs []string) [][]string {
+	arrM := make(map[[26]int][]string)
+	for _, str := range strs {
+		arr := [26]int{}
+		for _, v := range str {
+			arr[v-'a']++
 		}
+		arrM[arr] = append(arrM[arr], str)
 	}
-	return true
+	result := make([][]string, 0, len(arrM))
+	for _, strs := range arrM {
+		result = append(result, strs)
+	}
+	return result
 }
