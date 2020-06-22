@@ -67,9 +67,12 @@ func (s *Stack) Pop() *TreeNode {
 }
 
 // morris
-// curr 为 root
-// 1. 存在左子节点，并将其作为左子节点的右节点的最右子节点
-// 2. 不存在左子节点，就遍历其右节点，如果遇到上面情况，就换一下
+// 若current没有左子节点
+// a. 将current添加到输出
+// b. 进入右子树，亦即, current = current.right
+// 否则
+// a. 在current的左子树中，令current成为最右侧节点的右子节点
+// b. 进入左子树，亦即，current = current.left
 // 结局是线性树
 // 时间复杂度: O(n)
 // 空间复杂度: O(n)
@@ -85,7 +88,7 @@ func inorderMorris(root *TreeNode) []int {
 			root, root.Left = root.Left, nil
 		} else { // 说明自己已经是最左节点
 			result = append(result, root.Val)
-			root = root.Right
+			root = root.Right // 根节点飘逸
 		}
 	}
 	return result
