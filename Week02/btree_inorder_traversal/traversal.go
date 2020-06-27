@@ -18,17 +18,19 @@ type TreeNode struct {
 // 中序遍历
 // left-root-right
 func inorderTraversal(root *TreeNode) []int {
-	return inorderRecursive(root)
-}
-
-// recursive
-
-func inorderRecursive(root *TreeNode) []int {
-	if root == nil {
-		return nil
+	var (
+		result    = make([]int, 0)
+		recursive func(root *TreeNode)
+	)
+	recursive = func(root *TreeNode) {
+		if root == nil {
+			return
+		}
+		recursive(root.Left)
+		result = append(result, root.Val)
+		recursive(root.Right)
 	}
-	result := append(inorderRecursive(root.Left), root.Val)
-	result = append(result, inorderRecursive(root.Right)...)
+	recursive(root)
 	return result
 }
 

@@ -30,7 +30,7 @@ func anagrams(s, t string) bool {
 	length := len(s)
 	for i := 0; i < length; i++ {
 		arr[s[i]-'a']++
-		arr[t[i]-'a']++
+		arr[t[i]-'a']--
 	}
 	for _, v := range arr {
 		if v != 0 {
