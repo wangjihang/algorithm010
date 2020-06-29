@@ -21,32 +21,31 @@ func Permute(nums []int) [][]int {
 		length    = len(nums)
 		used      = make([]bool, length)
 		result    = make([][]int, 0)
-		backtrack func(nums []int, track []int, used []bool)
+		backtrack func(path []int, used []bool)
 	)
-	backtrack = func(nums []int, track []int, used []bool) {
-		if len(track) == length {
-			result = append(result, Copy(track, length))
+	backtrack = func(path []int, used []bool) {
+		if len(path) == length {
+			result = append(result, Copy(path, length))
 			return
 		}
-		for i, v := range used { // 遍历选择列表
-			if !v {
-				// 做选择
+		for i, isused := range used {
+			if !isused {
 				used[i] = true
-				track = append(track, nums[i])
-				// 回溯
-				backtrack(nums, track, used)
-				// 撤销选择
+				path = append(path, nums[i])
+
+				backtrack(path, used)
+
 				used[i] = false
-				track = track[:len(track)-1]
+				path = path[:len(path)-1]
 			}
 		}
 	}
-	backtrack(nums, nil, used)
+	backtrack(make([]int, 0, length), used)
 	return result
 }
 
-func Copy(track []int, length int) []int {
+func Copy(path []int, length int) []int {
 	dup := make([]int, length)
-	copy(dup, track)
+	copy(dup, path)
 	return dup
 }

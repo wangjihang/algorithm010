@@ -15,5 +15,8 @@
 | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water//) | week02 | 6.19 done | 6.21 done | 6.26 done | 待定 |
 | [N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/) | week02 | 6.20 done | 6.21 done | 6.27 done | 待定 |
 | [前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/) | week02 | 6.20 done | 6.21 done | 6.27 done | 待定 |
-| [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | week03 | 6.28 done | 6.29 | 7.05 | 待定 |
-| [全排列](https://leetcode-cn.com/problems/permutations/) | week03 | 6.28 done | 6.29 | 7.05 | 待定 |
+| [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | week03 | 6.28 done | 6.29 done | 7.05 | 待定 |
+| [全排列](https://leetcode-cn.com/problems/permutations/) | week03 | 6.28 done | 6.29 done | 7.05 | 待定 |
+| [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | week03 | 6.29 done | 6.30 | 7.06 | 待定 |
+| [组合](https://leetcode-cn.com/problems/combinations/) | week03 | 6.29 done | 6.30 | 7.06 | 待定 |
+| [全排列 II ](https://leetcode-cn.com/problems/permutations-ii/) | week03 | 6.29 done | 6.30 | 7.06 | 待定 |

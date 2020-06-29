@@ -1,30 +1,36 @@
 package algorithm
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
+func permuteUnique(nums []int) [][]int {
+	var (
+		length    = len(nums)
+		result    = make([][]int, 0)
+		backtrack func(path []int, used []bool)
+	)
+	backtrack = func(path []int, used []bool) {
+		if len(path) == length {
+			result = append(result, Copy(path, length))
+			return
+		}
+		usedM := make(map[int]bool)
+		for i, isused := range used {
+			if !isused && !usedM[nums[i]] {
+				used[i] = true
+				usedM[nums[i]] = true
+				path = append(path, nums[i])
+
+				backtrack(path, used)
+
+				used[i] = false
+				path = path[:len(path)-1]
+			}
+		}
+	}
+	backtrack(make([]int, 0, length), make([]bool, length))
+	return result
 }
 
-func buildTree(preorder []int, inorder []int) *TreeNode {
-	var (
-		p, i   int
-		length = len(preorder)
-		build  func(stop int) *TreeNode
-	)
-	build = func(stop int) *TreeNode {
-		if p >= length {
-			return nil
-		}
-		if inorder[i] != stop {
-			root := &TreeNode{preorder[p], nil, nil}
-			p++
-			root.Left = build(root.Val) // 结束说明碰到stop了
-			i++
-			root.Right = build(stop)
-			return root
-		}
-		return nil
-	}
-	return build(-1)
+func Copy(track []int, length int) []int {
+	dup := make([]int, length)
+	copy(dup, track)
+	return dup
 }
