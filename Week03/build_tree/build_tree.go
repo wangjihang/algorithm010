@@ -26,3 +26,27 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 	root.Right = buildTree(preorder[len(inorder[:i])+1:], inorder[i+1:])
 	return root
 }
+
+func BuildTree(preorder []int, inorder []int) *TreeNode {
+	var (
+		p, i   int
+		length = len(preorder)
+		build  func(stop int) *TreeNode
+	)
+	build = func(stop int) *TreeNode {
+		if p >= length {
+			return nil
+		}
+
+		if inorder[i] != stop {
+			root := &TreeNode{preorder[p], nil, nil}
+			p++
+			root.Left = build(root.Val)
+			i++
+			root.Right = build(stop)
+			return root
+		}
+		return nil
+	}
+	return build(0)
+}
