@@ -11,12 +11,12 @@ func permuteUnique(nums []int) [][]int {
 			result = append(result, Copy(path, length))
 			return
 		}
-		usedM := make(map[int]bool)
-		for i, isused := range used {
-			if !isused && !usedM[nums[i]] {
+		usedM := make(map[int]bool) // map[value]bool
+		for i, v := range nums {
+			if !used[i] && !usedM[v] {
 				used[i] = true
-				usedM[nums[i]] = true
-				path = append(path, nums[i])
+				usedM[v] = true
+				path = append(path, v)
 
 				backtrack(path, used)
 
