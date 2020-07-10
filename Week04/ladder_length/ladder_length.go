@@ -1,54 +1,65 @@
 package ladder_length
 
+// bfs
+// 时间复杂度：O(M*N) M单词长度 N列表中单词数量
+// 空间复杂度：O(M*N) dict 最坏情况下 每个预处理的单词 要存储N个单词
 func ladderLength(beginWord string, endWord string, wordList []string) int {
-	if indexOf(endWord, wordList) == -1 {
-		return 0
+	var (
+		dict    = make(map[string][]string)
+		visited = make(map[string]bool)
+		queue   = &Queue{}
+	)
+	// 预处理，将所有的通用状态存储到dict
+	for _, word := range wordList {
+		for i := range word {
+			key := word[:i] + "*" + word[i+1:]
+			dict[key] = append(dict[key], word)
+		}
 	}
-	var level int
-	usedM := make([]bool, len(wordList))
-	queue := make([]string, 0, len(wordList))
-	queue = append(queue, beginWord)
 
-	for len(queue) > 0 {
-		level++
-		l := len(queue)
-		for i := 0; i < l; i++ {
-			if queue[i] == endWord {
-				return level
-			}
-			for j, w := range wordList {
-				if !usedM[j] && hasOneDiff(queue[i], w) {
-					queue = append(queue, w)
-					usedM[j] = true
+	queue.Push(&Pair{beginWord, 1})
+
+	for !queue.IsEmpty() {
+		pair := queue.Pop()
+		visited[pair.Word] = true
+
+		// process node/ generate sub node/ queue add
+		for i := range pair.Word {
+			for _, word := range dict[pair.Word[:i]+"*"+pair.Word[i+1:]] {
+				if word == endWord { // 匹配
+					return pair.Depth + 1
+				}
+				if !visited[word] { // 防止环路
+					queue.Push(&Pair{word, pair.Depth + 1})
+					visited[word] = true
 				}
 			}
 		}
-		queue = queue[l:]
 	}
 	return 0
 }
 
-func indexOf(str string, arr []string) int {
-	for i, s := range arr {
-		if str == s {
-			return i
-		}
-	}
-	return -1
+type Pair struct {
+	Word  string
+	Depth int
 }
 
-func hasOneDiff(x, y string) bool {
-	count := 0
-	for i := 0; i < len(x); i++ {
-		if x[i] != y[i] {
-			count++
-			if count > 1 {
-				return false
-			}
-		}
+type Queue []*Pair
+
+func (q *Queue) Push(pair *Pair) {
+	*q = append(*q, pair)
+}
+
+func (q *Queue) Pop() *Pair {
+	if q.IsEmpty() {
+		return nil
 	}
-	if count == 1 {
-		return true
-	}
-	return false
+
+	pair := (*q)[0]
+	*q = (*q)[1:]
+	return pair
+}
+
+func (q *Queue) IsEmpty() bool {
+	return len(*q) == 0
 }
