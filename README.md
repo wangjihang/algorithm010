@@ -22,3 +22,4 @@
 | [全排列 II ](https://leetcode-cn.com/problems/permutations-ii/) | week03 | 6.29 done | 6.30 done | 7.06 | 待定 |
 | [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/description/) | week04 | 7.05 done | 7.06 | 7.12 | 待定 |
 | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/) | week04 | 7.05 done | 7.06 | 7.12 | 待定 |
+| [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/) | week04 | 7.05 done | 7.06 | 7.12 | 待定 |

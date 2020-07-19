@@ -1,30 +1,32 @@
-package algorithm
+package ladder_length
 
+// 双向bfs
+// 时间复杂度：O(N*M) N为数组长度，M为每个单词的长度
 func ladderLength(beginWord string, endWord string, wordList []string) int {
 	var (
 		depth     int
 		length    = len(wordList)
-		dict      = make(map[string]int, length)
+		dict      = make(map[string]int)
 		startQ    = make([]string, 0, length)
-		endQ      = make([]string, 0, length)
 		startUsed = make([]bool, length)
+		endQ      = make([]string, 0, length)
 		endUsed   = make([]bool, length)
 	)
-	for i, w := range wordList {
-		dict[w] = i
+	for idx, word := range wordList {
+		dict[word] = idx
 	}
-	if i, ok := dict[endWord]; !ok {
+	if idx, ok := dict[endWord]; !ok {
 		return 0
 	} else {
-		endUsed[i] = true
+		endUsed[idx] = true
 	}
 
 	startQ = append(startQ, beginWord)
 	endQ = append(endQ, endWord)
 
 	for len(startQ) > 0 {
-		depth++
 		l := len(startQ)
+		depth++
 
 		for i := 0; i < l; i++ {
 			chars := []byte(startQ[i])

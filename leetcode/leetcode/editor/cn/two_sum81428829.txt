@@ -1,0 +1,12 @@
+func twoSum(nums []int, target int) []int {
+	m := make(map[int]int)
+	for key, value := range nums {
+		if index, ok := m[target-value]; ok {
+			return []int{index, key}
+		}
+		m[value] = key
+	}
+	return nil
+}
+//runtime:4 ms
+//memory:3.8 MB
