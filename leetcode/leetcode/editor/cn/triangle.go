@@ -50,11 +50,11 @@ func minimumTotal(triangle [][]int) int {
 	return res
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
+//func min(a, b int) int {
+//	if a < b {
+//		return a
+//	}
+//	return b
+//}
 
 //leetcode submit region end(Prohibit modification and deletion)
