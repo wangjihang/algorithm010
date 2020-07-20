@@ -1,27 +1,20 @@
 package min_path_sum
 
+// 时间复杂度：
 func minPathSum(grid [][]int) int {
-	l := len(grid)
-	if l < 1 {
-		return 0
+	m, n := len(grid), len(grid[0])
+	for i := 1; i < m; i++ {
+		grid[i][0] += grid[i-1][0]
 	}
-	dp := make([][]int, l)
-	for i, arr := range grid {
-		dp[i] = make([]int, len(arr))
+	for j := 1; j < n; j++ {
+		grid[0][j] += grid[0][j-1]
 	}
-	dp[0][0] = grid[0][0]
-	for i := 0; i < l; i++ {
-		for j := 0; j < len(grid[i]); j++ {
-			if i == 0 && j != 0 {
-				dp[i][j] = dp[i][j-1] + grid[i][j]
-			} else if j == 0 && i != 0 {
-				dp[i][j] = dp[i-1][j] + grid[i][j]
-			} else if i != 0 && j != 0 {
-				dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
-			}
+	for i := 1; i < m; i++ {
+		for j := 1; j < n; j++ {
+			grid[i][j] += min(grid[i-1][j], grid[i][j-1])
 		}
 	}
-	return dp[l-1][len(dp[l-1])-1]
+	return grid[m-1][n-1]
 }
 
 func min(a, b int) int {

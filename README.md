@@ -23,3 +23,6 @@
 | [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/description/) | week04 | 7.05 done | 7.06 | 7.12 | 待定 |
 | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/) | week04 | 7.05 done | 7.06 | 7.12 | 待定 |
 | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/) | week04 | 7.05 done | 7.06 | 7.12 | 待定 |
+| 64. 最小路径和 | week06 | 7.19 done | 7.20 | 7.26 | 待定 |
+| 91. 解码方法 | week06 | 7.20 done | 7.21 | 7.27 | 待定 |
+| 221. 最大正方形 | week06 | 7.20 done | 7.21 | 7.27 | 待定 |

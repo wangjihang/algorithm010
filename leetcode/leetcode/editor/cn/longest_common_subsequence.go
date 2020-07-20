@@ -87,11 +87,4 @@ func longestCommonSubsequence(text1 string, text2 string) int {
 	return dp[n]
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 //leetcode submit region end(Prohibit modification and deletion)

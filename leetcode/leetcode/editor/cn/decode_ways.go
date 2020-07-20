@@ -26,27 +26,36 @@
 
 package main
 
-// dp[i] = dp[i-1] + dp[i-2] 当前数字的解码方式 = i和i-1分开的解码 + i和i-1相连的解码
 //leetcode submit region begin(Prohibit modification and deletion)
 func numDecodings(s string) int {
-	if s[0] == '0' {
+	if len(s) == 0 || s[0] == '0' {
 		return 0
 	}
-	pre, cur, length := 1, 1, len(s)
+	length := len(s)
+	dp := make([]int, length)
+	dp[0] = 1
 	for i := 1; i < length; i++ {
-		tmp := cur // 替换pre
 		if s[i] == '0' {
 			if s[i-1] == '1' || s[i-1] == '2' {
-				cur = pre
+				if i > 1 {
+					dp[i] = dp[i-2]
+				} else {
+					dp[i] = 1
+				}
 			} else {
 				return 0
 			}
-		} else if s[i-1] == '1' || s[i-1] == '2' && s[i] >= '1' && s[i] <= '6' {
-			cur += pre // dp[i] = dp[i-1] + dp[i-2]
+		} else if s[i-1] == '1' || s[i-1] == '2' && s[i] > '0' && s[i] <= '6' {
+			if i > 1 {
+				dp[i] = dp[i-1] + dp[i-2]
+			} else {
+				dp[i] = 2
+			}
+		} else {
+			dp[i] = dp[i-1]
 		}
-		pre = tmp
 	}
-	return cur
+	return dp[length-1]
 }
 
 //leetcode submit region end(Prohibit modification and deletion)

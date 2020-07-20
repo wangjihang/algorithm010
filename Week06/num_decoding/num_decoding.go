@@ -14,10 +14,10 @@ func numDecodings(s string) int {
 		if s[i] == '0' {
 			if s[i-1] == '1' || s[i-1] == '2' {
 				cur = pre
-				continue
+			} else {
+				return 0
 			}
-			return 0
-		} else if s[i-1] == '1' || (s[i-1] == '2' && s[i] >= '1' && s[i] <= 6) {
+		} else if s[i-1] == '1' || (s[i-1] == '2' && s[i] >= '1' && s[i] <= '6') {
 			cur += pre
 		}
 		pre = tmp
