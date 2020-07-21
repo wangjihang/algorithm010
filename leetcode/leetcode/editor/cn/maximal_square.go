@@ -47,11 +47,11 @@ func min(a, b int) int {
 	return a
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
+//func max(a, b int) int {
+//	if a > b {
+//		return a
+//	}
+//	return b
+//}
 
 //leetcode submit region end(Prohibit modification and deletion)
