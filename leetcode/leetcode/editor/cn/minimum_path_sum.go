@@ -21,7 +21,11 @@ package main
 // dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
 //leetcode submit region begin(Prohibit modification and deletion)
 func minPathSum(grid [][]int) int {
+	if len(grid) <= 0 || len(grid[0]) <= 0 {
+		return 0
+	}
 	m, n := len(grid), len(grid[0])
+	// init
 	for i := 1; i < m; i++ {
 		grid[i][0] += grid[i-1][0]
 	}
@@ -34,6 +38,13 @@ func minPathSum(grid [][]int) int {
 		}
 	}
 	return grid[m-1][n-1]
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
