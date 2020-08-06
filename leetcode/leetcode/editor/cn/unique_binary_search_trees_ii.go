@@ -1,8 +1,8 @@
-//给定一个整数 n，生成所有由 1 ... n 为节点所组成的 二叉搜索树 。 
+//给定一个整数 n，生成所有由 1 ... n 为节点所组成的 二叉搜索树 。
 //
-// 
 //
-// 示例： 
+//
+// 示例：
 //
 // 输入：3
 //输出：
@@ -21,18 +21,17 @@
 //     3     2     1      1   3      2
 //    /     /       \                 \
 //   2     1         2                 3
-// 
 //
-// 
 //
-// 提示： 
 //
-// 
-// 0 <= n <= 8 
-// 
-// Related Topics 树 动态规划 
+//
+// 提示：
+//
+//
+// 0 <= n <= 8
+//
+// Related Topics 树 动态规划
 // 👍 542 👎 0
-
 
 package main
 
@@ -46,6 +45,7 @@ package main
  * }
  */
 func generateTrees(n int) []*TreeNode {
-
+	return nil
 }
+
 //leetcode submit region end(Prohibit modification and deletion)

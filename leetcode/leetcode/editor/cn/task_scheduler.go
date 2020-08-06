@@ -50,11 +50,11 @@ func leastInterval(tasks []byte, n int) int {
 	return max((arr[25]-1)*(n+1)+count, len(tasks))
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
+//func max(a, b int) int {
+//	if a > b {
+//		return a
+//	}
+//	return b
+//}
 
 //leetcode submit region end(Prohibit modification and deletion)

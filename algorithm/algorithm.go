@@ -1,56 +1,36 @@
-package algorithm
+package main
 
-func ladderLength(beginWord string, endWord string, wordList []string) int {
+func main() {
+	canFinish(2, [][]int{{0, 1}})
+}
+
+// dfs
+func canFinish(numCourses int, prerequisites [][]int) bool {
 	var (
-		depth     int
-		length    = len(wordList)
-		dict      = make(map[string]int, length)
-		startQ    = make([]string, 0, length)
-		endQ      = make([]string, 0, length)
-		startUsed = make([]bool, length)
-		endUsed   = make([]bool, length)
+		edges   = make([][]int, numCourses)
+		visited = make([]int, numCourses) // 0 未开始, 1 开始搜索, 2 已完成
+		dfs     func(node int) bool
 	)
-	for i, w := range wordList {
-		dict[w] = i
+	for _, vs := range prerequisites {
+		edges[vs[1]] = append(edges[vs[1]], vs[0])
 	}
-	if i, ok := dict[endWord]; !ok {
-		return 0
-	} else {
-		endUsed[i] = true
-	}
-
-	startQ = append(startQ, beginWord)
-	endQ = append(endQ, endWord)
-
-	for len(startQ) > 0 {
-		depth++
-		l := len(startQ)
-
-		for i := 0; i < l; i++ {
-			chars := []byte(startQ[i])
-			for i := range chars {
-				o := chars[i]
-				for c := 'a'; c <= 'z'; c++ {
-					chars[i] = byte(c)
-					idx, ok := dict[string(chars)]
-					if !ok || startUsed[idx] {
-						continue
-					}
-					if endUsed[idx] {
-						return depth + 1
-					}
-					startQ = append(startQ, wordList[idx])
-					startUsed[idx] = true
-				}
-				chars[i] = o
+	dfs = func(node int) bool {
+		if visited[node] == 2 {
+			return true
+		}
+		visited[node] = 1
+		for _, v := range edges[node] {
+			if visited[v] == 1 || !dfs(v) {
+				return false
 			}
 		}
-
-		startQ = startQ[l:]
-		if len(startQ) > len(endQ) {
-			startQ, endQ = endQ, startQ
-			startUsed, endUsed = endUsed, startUsed
+		visited[node] = 2
+		return true
+	}
+	for i := 0; i < numCourses; i++ {
+		if visited[i] == 0 && !dfs(i) {
+			return false
 		}
 	}
-	return 0
+	return true
 }

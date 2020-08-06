@@ -30,38 +30,38 @@ package main
  * }
  */
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
-func minDepth(root *TreeNode) int {
-	if root == nil {
-		return 0
-	}
-
-	res := 0
-	queue := make([]*TreeNode, 0)
-	queue = append(queue, root)
-
-	for len(queue) > 0 {
-		end := len(queue)
-		for i := 0; i < end; i++ {
-			if queue[i].Left == nil && queue[i].Right == nil {
-				return res + 1
-			}
-			if queue[i].Left != nil {
-				queue = append(queue, queue[i].Left)
-			}
-			if queue[i].Right != nil {
-				queue = append(queue, queue[i].Right)
-			}
-		}
-		res++
-		queue = queue[end:]
-	}
-	return res
-}
+//type TreeNode struct {
+//	Val   int
+//	Left  *TreeNode
+//	Right *TreeNode
+//}
+//
+//func minDepth(root *TreeNode) int {
+//	if root == nil {
+//		return 0
+//	}
+//
+//	res := 0
+//	queue := make([]*TreeNode, 0)
+//	queue = append(queue, root)
+//
+//	for len(queue) > 0 {
+//		end := len(queue)
+//		for i := 0; i < end; i++ {
+//			if queue[i].Left == nil && queue[i].Right == nil {
+//				return res + 1
+//			}
+//			if queue[i].Left != nil {
+//				queue = append(queue, queue[i].Left)
+//			}
+//			if queue[i].Right != nil {
+//				queue = append(queue, queue[i].Right)
+//			}
+//		}
+//		res++
+//		queue = queue[end:]
+//	}
+//	return res
+//}
 
 //leetcode submit region end(Prohibit modification and deletion)
