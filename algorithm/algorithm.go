@@ -1,36 +1,34 @@
 package main
 
+import (
+	"sort"
+)
+
 func main() {
-	canFinish(2, [][]int{{0, 1}})
 }
 
-// dfs
-func canFinish(numCourses int, prerequisites [][]int) bool {
-	var (
-		edges   = make([][]int, numCourses)
-		visited = make([]int, numCourses) // 0 未开始, 1 开始搜索, 2 已完成
-		dfs     func(node int) bool
-	)
-	for _, vs := range prerequisites {
-		edges[vs[1]] = append(edges[vs[1]], vs[0])
+// m*(n+1)+2k
+func leastInterval(tasks []byte, n int) int {
+	arr := make([]int, 26)
+	for _, v := range tasks {
+		arr[v-'A']++
 	}
-	dfs = func(node int) bool {
-		if visited[node] == 2 {
-			return true
+	sort.Ints(arr)
+
+	count := 1
+	for i := 24; i >= 0; i-- {
+		if arr[i] < arr[25] {
+			break
 		}
-		visited[node] = 1
-		for _, v := range edges[node] {
-			if visited[v] == 1 || !dfs(v) {
-				return false
-			}
-		}
-		visited[node] = 2
-		return true
+		count++
 	}
-	for i := 0; i < numCourses; i++ {
-		if visited[i] == 0 && !dfs(i) {
-			return false
-		}
+
+	return max((arr[25]-1)*(n+1)+count, len(tasks))
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
 	}
-	return true
+	return b
 }
