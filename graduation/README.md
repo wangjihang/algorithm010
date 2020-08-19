@@ -75,7 +75,7 @@
 - O(n^2): Factorial 阶乘复杂度
 
 ### 3.2 时间复杂度曲线
-![大O表示法](https://raw.githubusercontent.com/wangjihang/img/master/20200819190353.png?token=AFCBVMTIFZMRWHWS2YXQQW27HUDV2)
+![大O表示法](https://raw.githubusercontent.com/wangjihang/img/master/20200819201621.png)
 
 ## 4 数据结构
 ### 4.1 数组Array
@@ -91,24 +91,24 @@
 
 #### 4.4.2 examples
 给有序链表加速
-![给有序的链表加速](https://raw.githubusercontent.com/wangjihang/img/master/20200819192217.png?token=AFCBVMXGDKUVLSWX4N7YSVC7HUF2S)
+![给有序的链表加速](https://raw.githubusercontent.com/wangjihang/img/master/20200819201946.png)
 多级索引
-![多级索引](https://raw.githubusercontent.com/wangjihang/img/master/20200819192253.png?token=AFCBVMWCJ5SS4EZL47RMNNK7HUF44)
+![多级索引](https://raw.githubusercontent.com/wangjihang/img/master/20200819201921.png)
 现实中跳表的形态
-![现实中跳表的形态](https://raw.githubusercontent.com/wangjihang/img/master/20200819192534.png?token=AFCBVMWU7ELK3K3555AAV7S7HUGG2)
+![现实中跳表的形态](https://raw.githubusercontent.com/wangjihang/img/master/20200819201901.png)
 
 ### 4.5 栈Stack
-![Stack](https://raw.githubusercontent.com/wangjihang/img/master/20200819192822.png?token=AFCBVMRTUP45NUBWPF3QQNK7HUGRO)
+![Stack](https://raw.githubusercontent.com/wangjihang/img/master/20200819201745.png)
 
 Stack：先入后出；添加、删除皆为O(1)
 
 ### 4.6 队列Queue
-![queue](https://raw.githubusercontent.com/wangjihang/img/master/20200819192856.png?token=AFCBVMWKWAD2RFR22H7EJUC7HUGTQ)
+![queue](https://raw.githubusercontent.com/wangjihang/img/master/20200819201806.png)
 
 Queue：先入先出；添加、删除皆为O(1)
 
 ### 4.6 双端队列Deque
-![Deque](https://raw.githubusercontent.com/wangjihang/img/master/20200819193052.png?token=AFCBVMRMLAGDTRSBFZ236A27HUG2W)
+![Deque](https://raw.githubusercontent.com/wangjihang/img/master/20200819201824.png)
 
 - 简单理解：双端可以进出的Queue
 - 插入和删除都是O(1)操作
@@ -135,7 +135,7 @@ Linked List是特殊化的Tree
 
 Tree是特殊化的Graph
 1. 树Tree
-![Tree](https://raw.githubusercontent.com/wangjihang/img/master/20200819195141.png?token=AFCBVMRA5PSFDJFPPNE6HSK7HUJI4)
+![Tree](https://raw.githubusercontent.com/wangjihang/img/master/20200819202036.png)
 
 2. 二叉树
 - 遍历：
@@ -143,7 +143,7 @@ Tree是特殊化的Graph
     - 中序(in-order): 左-根-右
     - 后序(post-order): 左-右-根
 - 示例代码：
-![示例代码](https://raw.githubusercontent.com/wangjihang/img/master/20200819195450.png?token=AFCBVMRO7Z5ORPP36CV4GPK7HUJUU)
+![示例代码](https://raw.githubusercontent.com/wangjihang/img/master/20200819202104.png)
 
 3. 二叉搜索树Binary Search Tree
 - 定义：二叉搜索树也称有序二叉树、排序二叉树，是指一颗空树或者具有下列性质的二叉树：
@@ -151,8 +151,119 @@ Tree是特殊化的Graph
     - 右子树上所有结点的值均大于它的根节点的值；
     - 以此类推：左、右子树也分别为二叉查找树(重复性)。
 
-### 4.18 复杂度分析
-![复杂度分析](https://raw.githubusercontent.com/wangjihang/img/master/20200819193456.png?token=AFCBVMWELLDLZSOEA6WJMPS7HUHKI)
+4. 字典树Trie
+- 基本结构：![基本结构](https://raw.githubusercontent.com/wangjihang/img/master/20200819212948.png)
+- 基本性质
+    1. 节点本身不存完整的单词；
+    1. 从根节点到某一节点，路径上经过的字符连接起来，为该节点对应的字符串；
+    1. 每个节点的所有子节点路径代表的字符都不相同。
+- 节点的内部实现：![节点的内部实现](https://raw.githubusercontent.com/wangjihang/img/master/20200819213227.png)
+- 核心思想
+    - 空间换时间
+    - 利用字符串的公共前缀来降低查询时间的开销已达到提高效率的目的。
+- 代码示例：![代码示例](https://raw.githubusercontent.com/wangjihang/img/master/20200819213440.png)
+
+### 4.10 并查集
+1. 场景：
+    - 组团、配对问题
+    - Group or not？
+1. 基本操作
+    - 初始化：![初始化](https://raw.githubusercontent.com/wangjihang/img/master/20200819213638.png)
+    - 查询、合并：![查询、合并](https://raw.githubusercontent.com/wangjihang/img/master/20200819213715.png)
+    - 路径压缩：![路径压缩](https://raw.githubusercontent.com/wangjihang/img/master/20200819213735.png)
+1. 代码示例：![代码示例](https://raw.githubusercontent.com/wangjihang/img/master/20200819213810.png)
+
+
+## 5. 算法
+### 5.1 递归Recursion
+递归-循环
+
+通过函数体来进行的循环
+1. 代码模板
+![代码模板](https://raw.githubusercontent.com/wangjihang/img/master/20200819203723.png)
+2. 思维要点
+    - 不要人肉进行递归(最大误区)
+    - 找到最近最简方法，将其拆解成可重复解决的问题(重复子问题)
+    - 数学归纳法思维
+
+### 5.2 分治Divide&Conquer
+分治将大问题拆成多个子问题，最后再merge
+
+递归状态树：
+![递归状态树](https://raw.githubusercontent.com/wangjihang/img/master/20200819204604.png)
+
+分治代码模板:
+![分治代码模板](https://raw.githubusercontent.com/wangjihang/img/master/20200819204705.png)
+
+### 5.3 回溯Backtrace
+描述：回溯法采用试错的思想，它尝试分步的去解决一个问题。在分步解决的过程中，当它通过尝试发现现有的分步答案不能得到有效的正确的解答
+的时候，它将取消上一步甚至是上几步的计算，再通过其它的可能的分步解答再次尝试寻找问题的答案。
+
+在重复上述步骤后可能出现两种情况：
+- 找到一个可能存在的正确的答案
+- 在尝试了所有可能的分步方法后宣告该问题没有答案。
+
+在最坏的情况下，回溯法会导致一次复杂度为指数时间的计算。
+
+回溯模板：
+![回溯模板](https://raw.githubusercontent.com/wangjihang/img/master/20200819205443.png)
+
+### 5.4 搜索-遍历
+- 每个节点都要访问一次
+- 每个节点仅仅要访问一次
+- 对于节点的访问顺序不同
+    - 深度优先：depth first search
+    - 广度优先：breadth first search
+
+1. 深度优先dfs
+
+遍历顺序：![遍历顺序](https://raw.githubusercontent.com/wangjihang/img/master/20200819210433.png)
+- 递归写法
+- 非递归写法：使用stack
+
+2. 广度优先bfs
+
+遍历循序：![遍历循序](https://raw.githubusercontent.com/wangjihang/img/master/20200819210643.png)
+
+示例代码：![示例代码](https://raw.githubusercontent.com/wangjihang/img/master/20200819210708.png)
+
+### 5.5 贪心算法Greedy
+贪心算法是一种在每一步选择中都采取在当前状态下最好或最优的选择，从而希望导致结果是全局最好或最优的算法。
+
+贪心算法与动态规划的不同在于它对每个子问题的解决方案都做出选择，不能回退。动态规划则会保存以前的运算结果，
+并根据以前的结果对当前进行选择，有回退功能
+
+注意：一旦一个问题可以通过贪心法来解决，那么贪心法一般是解决这个问题的最好办法。
+
+场景：问题能够分解成子问题来解决，子问题的最优解能递推到最终问题的最优解。这种子问题最优解称为最优子结构。
+
+### 5.6 二分查找
+- 前提：
+    1. 目标函数单调性(单调递增或者递减)
+    1. 存在上下界(bound)
+    1. 能够通过索引访问(index accessible)
+- 代码模板：![代码模板](https://raw.githubusercontent.com/wangjihang/img/master/20200819211812.png)
+
+### 5.7 动态规划Dynamic Programming
+1. 描述
+    - Wiki：https://en.wikipedia.org/wiki/Dynamic_programming
+    - "Simplifying a complicated problem by breaking it down into simpler sub-problems"(in a recusive manner)
+    - Divide & Conquer + Optimal substructure(分治+最优子结构)
+1. 关键点
+    - 动态规划和递归或者分治没有根本上区别(关键看有无最优子结构)
+    - 共性：找到重复子问题
+    - 差异性：最优子结构、中途可以淘汰次优解
+1. 实战
+    1. 最优子结构 opt[n]=best_of(opt[n-1],opt[n-2],...)
+    1. 存储中间状态：opt[i]
+    1. 递推公式(状态转义方程 或者 DP方程)，Fib：opt[i]=opt[i-1]+opt[i-2]
+    
+
+
+### 附录
+- 大O表示法：![大O表示法](https://raw.githubusercontent.com/wangjihang/img/master/20200819201621.png)
+- 复杂度分析：![复杂度分析](https://raw.githubusercontent.com/wangjihang/img/master/20200819201542.png)
+
 
 ### 工具
 - https://visualgo.net/zh/bst?slide=1

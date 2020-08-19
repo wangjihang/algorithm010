@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ccc3d41-f110-497c-9333-5c4a6495fa3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/algorithm010.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/daily_topic/board_arround/solve.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/daily_topic/股票系列/stock1/stock.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/climbing_stairs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/algorithm.go" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/graduation/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
