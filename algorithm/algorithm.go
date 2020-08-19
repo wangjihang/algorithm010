@@ -1,13 +1,20 @@
 package main
 
 import (
+	"fmt"
 	"sort"
 )
 
 func main() {
+	sum := 1
+	for i := 1; i < 10; i++ {
+		sum += sum * 2
+		fmt.Println(sum)
+	}
 }
 
-// m*(n+1)+2k
+//
+// max((k-1)*n + mk, len(task))
 func leastInterval(tasks []byte, n int) int {
 	arr := make([]int, 26)
 	for _, v := range tasks {
@@ -22,7 +29,6 @@ func leastInterval(tasks []byte, n int) int {
 		}
 		count++
 	}
-
 	return max((arr[25]-1)*(n+1)+count, len(tasks))
 }
 

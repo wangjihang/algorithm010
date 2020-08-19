@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ccc3d41-f110-497c-9333-5c4a6495fa3b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/algorithm010.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/daily_topic/board_arround/solve.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/daily_topic/股票系列/stock1/stock.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graduation/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/climbing_stairs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/algorithm.go" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/leetcode/editor/cn/translation.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="$USER_HOME$/.gvm/gos/go1.14" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1fz1z99NGk7cPq1eDxfIqyCMFyb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/daily_topic/board_arround" />
+      <recent name="$PROJECT_DIR$/daily_topic" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/wangjihang/algorithm010/algorithm" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="algorithm010" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/algorithm/algorithm.go" />
+      <package value="github.com/wangjihang/algorithm010/algorithm" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/wangjihang/algorithm010/algorithm" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="547" y="-817" key="#com.intellij.ide.util.MemberChooser" timestamp="1597472902494">
+      <screen x="-226" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="547" y="-817" key="#com.intellij.ide.util.MemberChooser/-226.-1080.1920.1080/0.0.1440.900@-226.-1080.1920.1080" timestamp="1597472902494" />
+    <state width="1398" height="305" key="GridCell.Tab.0.bottom" timestamp="1597732922380">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597732922380" />
+    <state width="1398" height="305" key="GridCell.Tab.0.center" timestamp="1597732922379">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597732922379" />
+    <state width="1398" height="305" key="GridCell.Tab.0.left" timestamp="1597732922378">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597732922378" />
+    <state width="1398" height="305" key="GridCell.Tab.0.right" timestamp="1597732922380">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597732922380" />
+    <state x="435" y="-785" width="598" height="490" key="find.popup" timestamp="1597588562077">
+      <screen x="-226" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="435" y="-785" width="598" height="490" key="find.popup/-226.-1080.1920.1080/0.0.1440.900@-226.-1080.1920.1080" timestamp="1597588562077" />
+  </component>
+</project>
