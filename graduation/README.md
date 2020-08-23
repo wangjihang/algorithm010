@@ -163,6 +163,22 @@ Tree是特殊化的Graph
     - 利用字符串的公共前缀来降低查询时间的开销已达到提高效率的目的。
 - 代码示例：![代码示例](https://raw.githubusercontent.com/wangjihang/img/master/20200819213440.png)
 
+5. AVL树
+    1. 发明者G.M.Adelson-Velsky和Evgenii Landis
+    1. Balance Factor(平衡因子)：它的左子树高度减去它的右子树高度。balance factor = {-1, 0, 1}
+    1. 通过旋转操作来进行平衡(四种)
+    1. https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree
+    
+    #### 5.1 记录左右子树高度![记录左右子树高度](https://raw.githubusercontent.com/wangjihang/img/master/20200821195406.png) 
+    #### 5.2 旋转
+    参考动画：https://zhuanlan.zhihu.com/p/63272157 
+    ![旋转](https://raw.githubusercontent.com/wangjihang/img/master/20200821195511.png)
+    #### 5.3 总结
+    1. 平衡二叉搜索树
+    1. 每个节点存balance factor = {-1, 0, 1}
+    1. 四种旋转操作
+    1. 不足: 节点需要存储额外的信息、且调整次数频繁
+    
 ### 4.10 并查集
 1. 场景：
     - 组团、配对问题
@@ -171,7 +187,7 @@ Tree是特殊化的Graph
     - 初始化：![初始化](https://raw.githubusercontent.com/wangjihang/img/master/20200819213638.png)
     - 查询、合并：![查询、合并](https://raw.githubusercontent.com/wangjihang/img/master/20200819213715.png)
     - 路径压缩：![路径压缩](https://raw.githubusercontent.com/wangjihang/img/master/20200819213735.png)
-1. 代码示例：![代码示例](https://raw.githubusercontent.com/wangjihang/img/master/20200819213810.png)
+1. 代码示例：![代码示例](https://raw.githubusercontent.com/wangjihang/img/master/20200821192453.png)
 
 
 ## 5. 算法
@@ -258,7 +274,16 @@ Tree是特殊化的Graph
     1. 存储中间状态：opt[i]
     1. 递推公式(状态转义方程 或者 DP方程)，Fib：opt[i]=opt[i-1]+opt[i-2]
     
-
+### 5.8 高级搜索
+1. 剪枝
+    - 如果一个分支不满足条件，那就砍掉此分支。
+1. 双向BFS
+    - 分别从前后双向开始搜索
+    - ![双向BFS](https://raw.githubusercontent.com/wangjihang/img/master/20200821194514.png)
+1. 启发式搜索(A*)
+    - 根据估价函数不断找优先级高的分支，循环往复。
+    - 估价函数：h(n)，它用来评价哪些结点最有希望是一个我们要找的节点，h(n)会返回一个非负实数，也可以认为是从节点n到目标节点路径的估计成本。
+    - 估价函数是一种告知搜索方向的方法。它提供了一种明智的方法来猜测哪个邻居节点会导向一个目标。
 
 ### 附录
 - 大O表示法：![大O表示法](https://raw.githubusercontent.com/wangjihang/img/master/20200819201621.png)
